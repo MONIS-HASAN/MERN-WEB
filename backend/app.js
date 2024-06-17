@@ -24,8 +24,11 @@ mongoose.connect('mongodb+srv://Monix:karachi1234@db.ok9lkhh.mongodb.net/Invetor
   });
 
 // Define routes
-const productsRoute = require('./routes/products');
+const productsRoute = require('./routes/route');
 app.use('/api', productsRoute);
+
+const ContactRoute = require('./routes/Contact_route');
+app.use('/api', ContactRoute);
 
 // Handle 404 errors
 app.use((req, res, next) => {
